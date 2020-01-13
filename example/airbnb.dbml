@@ -1,0 +1,57 @@
+Table users {
+  id integer [primary key]
+  email varchar [unique, not null]
+}
+
+Table bookings {
+  id integer [primary key]
+  user_id integer
+  place_id integer
+  start_date date
+  end_date date
+  price_per_night float
+  num_nights integer
+}
+
+// Places
+Table places {
+  id integer [primary key]
+  host_id integer [not null, unique]
+  address varchar
+  city_id varchar
+}
+
+Table reviews {
+  id integer [primary key]
+  booking_id integer
+  rating tinyint
+  review_body text
+}
+
+// A host is also a user, but with additional info
+Table hosts {
+  id integer [primary key]
+  user_id integer
+}
+
+Table cities {
+  id integer [primary key]
+  name varchar
+  country_id integer
+}
+
+Table countries {
+  id integer [primary key]
+  country_code varchar
+  name varchar
+}
+
+Ref: cities.country_id > countries.id
+Ref: places.host_id > hosts.id
+Ref: users.id < bookings.user_id
+Ref: bookings.place_id > places.id
+Ref: places.city_id > cities.id
+Ref: hosts.user_id > users.id
+
+
+Ref: "bookings"."id" < "reviews"."booking_id"

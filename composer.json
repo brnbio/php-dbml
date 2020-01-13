@@ -1,0 +1,21 @@
+{
+    "name": "brnbio/php-dbml",
+    "description": "PHP Parser for database markup language (dbml)",
+    "type": "library",
+    "require": {
+        "php": "^7.3"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Dbml\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Frank Heider",
+            "email": "frank@brnb.io"
+        }
+    ],
+    "minimum-stability": "dev"
+}
