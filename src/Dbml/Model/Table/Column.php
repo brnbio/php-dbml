@@ -13,42 +13,42 @@ class Column
     /**
      * @var string
      */
-    protected $name;
+    public $name;
 
     /**
      * @var string
      */
-    protected $type;
+    public $type;
 
     /**
      * @var bool
      */
-    protected $null = true;
+    public $null = true;
 
     /**
      * @var bool
      */
-    protected $unsigned = false;
+    public $unsigned = false;
 
     /**
      * @var int|null
      */
-    protected $length = null;
+    public $length = null;
 
     /**
      * @var string|null
      */
-    protected $default = null;
+    public $default = null;
 
     /**
      * @var bool
      */
-    protected $unique = false;
+    public $unique = false;
 
     /**
      * @var bool
      */
-    protected $autoIncrement = false;
+    public $autoIncrement = false;
 
     /**
      * @param string $name

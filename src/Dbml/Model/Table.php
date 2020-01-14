@@ -15,17 +15,17 @@ class Table
     /**
      * @var string
      */
-    protected $name;
+    public $name;
 
     /**
      * @var string|null
      */
-    protected $alias = null;
+    public $alias = null;
 
     /**
      * @var Column[]
      */
-    protected $columns = [];
+    public $columns = [];
 
     /**
      * Table constructor.
