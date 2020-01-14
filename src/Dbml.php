@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Dbml;
 
-use Dbml\Dbml\Decoder;
+use Dbml\Dbml\Decoder as DbmlDecoder;
 use Dbml\Dbml\Model\Table;
 
 /**
@@ -39,7 +39,7 @@ class Dbml
     private function decode(): Dbml
     {
         $dbml = file_get_contents($this->filename);
-        $this->tables = Decoder::run($dbml);
+        $this->tables = DbmlDecoder::run($dbml);
 
         return $this;
     }
@@ -49,6 +49,14 @@ class Dbml
      */
     public function encode(): string
     {
-        //
+        // TODO
+    }
+
+    /**
+     * @return string
+     */
+    public function toSql(): string
+    {
+        // TODO
     }
 }
