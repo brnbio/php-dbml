@@ -17,5 +17,8 @@
             "email": "frank@brnb.io"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require-dev": {
+        "symfony/var-dumper": "^5.1@dev"
+    }
 }

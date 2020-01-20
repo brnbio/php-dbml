@@ -59,4 +59,19 @@ class Dbml
     {
         // TODO
     }
+
+    /**
+     * @param string|null $key
+     * @return Table|null
+     */
+    public function tables(string $key = null): ?Table
+    {
+        foreach ($this->tables as $table) {
+            if ($table->name === $key) {
+                return $table;
+            }
+        }
+
+        return null;
+    }
 }

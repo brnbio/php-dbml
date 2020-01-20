@@ -4,7 +4,7 @@ Table users {
 }
 
 Table bookings {
-  id integer [primary key]
+  id integer [primrary key]
   user_id integer
   place_id integer
   start_date date
