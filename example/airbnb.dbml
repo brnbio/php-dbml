@@ -48,10 +48,8 @@ Table countries {
 
 Ref: cities.country_id > countries.id
 Ref: places.host_id > hosts.id
-Ref: users.id < bookings.user_id
+Ref: bookings.user_id > users.id
 Ref: bookings.place_id > places.id
 Ref: places.city_id > cities.id
 Ref: hosts.user_id > users.id
-
-
-Ref: "bookings"."id" < "reviews"."booking_id"
+Ref: reviews.booking_id > bookings.id

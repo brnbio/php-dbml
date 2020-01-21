@@ -6,6 +6,7 @@ namespace Dbml;
 
 use Dbml\Dbml\Decoder as DbmlDecoder;
 use Dbml\Dbml\Model\Table;
+use Exception;
 
 /**
  * Class Dbml
@@ -26,6 +27,7 @@ class Dbml
     /**
      * Dbml constructor.
      * @param string $filename
+     * @throws Exception
      */
     public function __construct(string $filename)
     {
@@ -35,6 +37,7 @@ class Dbml
 
     /**
      * @return Dbml
+     * @throws Exception
      */
     private function decode(): Dbml
     {

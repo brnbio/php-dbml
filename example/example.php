@@ -8,4 +8,4 @@ use Dbml\Dbml;
 $file = __DIR__ . DIRECTORY_SEPARATOR . 'airbnb.dbml';
 $dbml = new Dbml($file);
 
-dd($dbml->tables('users'));
+dd($dbml->tables);
